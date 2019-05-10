@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">MovieInfo</string>
+    <string-array name="plot">
+        <item>short</item>
+        <item>full</item>
+
+    </string-array>
+
+    <string-array name="type">
+        <item>movie</item>
+        <item>episode</item>
+        <item>series</item>
+
+    </string-array>
+</resources>
