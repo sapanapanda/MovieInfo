@@ -1,7 +1,5 @@
 package com.sapana.androidapps.movieinfo.adapter;
 
-import android.content.Intent;
-import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.bumptech.glide.Glide;
-import com.sapana.androidapps.movieinfo.MainActivity;
 import com.sapana.androidapps.movieinfo.R;
 import com.sapana.androidapps.movieinfo.model.Movie;
 import com.sapana.androidapps.movieinfo.movie_detail.MovieActivity;
@@ -49,7 +46,7 @@ public class MovieRecyclerViewAdapter
         holder.mYearView.setText(year);
 
         final String imageUrl;
-        if(movie.getPoster()!= null) {
+        if (movie.getPoster() != null) {
             if (!movie.getPoster().equals("N/A")) {
                 imageUrl = movie.getPoster();
             } else {
@@ -80,10 +77,10 @@ public class MovieRecyclerViewAdapter
         public ViewHolder(View view) {
             super(view);
             mView = view;
-            mTitleView = (TextView) view.findViewById(R.id.movie_title);
-            mYearView = (TextView) view.findViewById(R.id.movie_year);
-            mThumbImageView = (ImageView) view.findViewById(R.id.thumbnail);
-            mDirectorView = (TextView) view.findViewById(R.id.movie_director);
+            mTitleView = view.findViewById(R.id.movie_title);
+            mYearView = view.findViewById(R.id.movie_year);
+            mThumbImageView = view.findViewById(R.id.thumbnail);
+            mDirectorView = view.findViewById(R.id.movie_director);
         }
 
     }

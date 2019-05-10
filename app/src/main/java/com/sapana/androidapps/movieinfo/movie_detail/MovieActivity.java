@@ -1,7 +1,7 @@
 package com.sapana.androidapps.movieinfo.movie_detail;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -17,7 +17,7 @@ import com.sapana.androidapps.movieinfo.model.Movie;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MovieActivity extends AppCompatActivity implements movieContract.View{
+public class MovieActivity extends AppCompatActivity implements movieContract.View {
     moviePresenter presenter;
 
     RecyclerView rvList;
@@ -53,7 +53,7 @@ public class MovieActivity extends AppCompatActivity implements movieContract.Vi
 
         rvList.setItemAnimator(new DefaultItemAnimator());
         rvList.setAdapter(adapter);
-        presenter.requestData(search.getTitle(),search.getYear(),search.getPlot(),search.getType());
+        presenter.requestData(search.getTitle(), search.getYear(), search.getPlot(), search.getType());
 
     }
 
@@ -71,16 +71,16 @@ public class MovieActivity extends AppCompatActivity implements movieContract.Vi
     @Override
     public void setDataToRecyclerView(List<Movie> movieList) {
 
-if(movieList.size()==0)
-    Toast.makeText(getApplicationContext(),"No data found",Toast.LENGTH_SHORT).show();
-else {
-    this.movieList.addAll(movieList);
-    adapter.notifyDataSetChanged();
-}
+        if (movieList.size() == 0)
+            Toast.makeText(getApplicationContext(), "No data found", Toast.LENGTH_SHORT).show();
+        else {
+            this.movieList.addAll(movieList);
+            adapter.notifyDataSetChanged();
+        }
     }
 
     @Override
     public void onResponseFailure(Throwable throwable) {
-        Toast.makeText(getApplicationContext(),"No Data Found",Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "No Data Found", Toast.LENGTH_SHORT).show();
     }
 }

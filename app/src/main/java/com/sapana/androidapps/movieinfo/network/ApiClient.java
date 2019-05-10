@@ -8,7 +8,8 @@ public class ApiClient {
     private static Retrofit retrofit = null;
 
     public static final String API_KEY = "16fcddf0";
-     /**
+
+    /**
      * This method returns retrofit client instance
      *
      * @return Retrofit object

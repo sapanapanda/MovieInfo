@@ -12,8 +12,7 @@ public class DatabaseClient {
     //our app database object
     private MySearchDatabase appDatabase;
 
-    public DatabaseClient(Context mCtx)
-    {
+    public DatabaseClient(Context mCtx) {
         this.mCtx = mCtx;
 
         //creating the app database with Room database builder
@@ -28,8 +27,7 @@ public class DatabaseClient {
         return mInstance;
     }
 
-    public MySearchDatabase getAppDatabase()
-    {
+    public MySearchDatabase getAppDatabase() {
         return appDatabase;
     }
 

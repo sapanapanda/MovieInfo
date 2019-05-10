@@ -5,8 +5,6 @@ import android.arch.persistence.room.PrimaryKey;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import java.io.Serializable;
-
 @Entity
 public class MySearch implements Parcelable {
 
@@ -81,7 +79,6 @@ public class MySearch implements Parcelable {
     private String year;
     private String plot;
     private String type;
-
 
 
 }

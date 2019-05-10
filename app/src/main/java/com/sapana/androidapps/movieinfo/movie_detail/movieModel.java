@@ -8,8 +8,6 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import java.util.List;
-
 import static android.support.constraint.Constraints.TAG;
 import static com.sapana.androidapps.movieinfo.network.ApiClient.API_KEY;
 
@@ -19,7 +17,7 @@ public class movieModel implements movieContract.Model {
         ApiInterface apiService =
                 ApiClient.getClient().create(ApiInterface.class);
 
-        Call<Movie> call = apiService.getMovie(API_KEY, title,type,year,plot);
+        Call<Movie> call = apiService.getMovie(API_KEY, title, type, year, plot);
         call.enqueue(new Callback<Movie>() {
             @Override
             public void onResponse(Call<Movie> call, Response<Movie> response) {
@@ -36,5 +34,5 @@ public class movieModel implements movieContract.Model {
             }
         });
     }
-    }
+}
 

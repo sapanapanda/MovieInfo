@@ -14,13 +14,13 @@ public class movieContract {
             void onFailure(Throwable t);
         }
 
-        void getMovieList(OnFinishedListener onFinishedListener,String title,
-                            String year,String plot,String type);
+        void getMovieList(OnFinishedListener onFinishedListener, String title,
+                          String year, String plot, String type);
 
 
     }
 
-public     interface View {
+    public interface View {
 
         void showProgress();
 
@@ -37,10 +37,7 @@ public     interface View {
 
         void onDestroy();
 
-        void requestData(String title,String year,String plot,String type);
-
-
-
+        void requestData(String title, String year, String plot, String type);
 
 
     }

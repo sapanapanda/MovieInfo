@@ -9,7 +9,7 @@ public interface ApiInterface {
 
 
     @GET("/")
-    Call<Movie>getMovie(@Query("apikey") String key,
-                        @Query("t") String title,@Query("type") String type, @Query("y") String year,
-            @Query("plot") String plot);
-    }
+    Call<Movie> getMovie(@Query("apikey") String key,
+                         @Query("t") String title, @Query("type") String type, @Query("y") String year,
+                         @Query("plot") String plot);
+}
